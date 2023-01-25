@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <title>Prueba React</title>
+</head>
+<body>
+   
+    <div id="root"></div>
+    <br>
+    <div id="otro"></div>
+
+<!--     La función render lo que hace es que me crea el elemento h1 con el valor de inicio con React y sin ningún atributo y que lo imprime en el el elemento con el id root. -->
+  
+    <script type="text/javascript">
+        let heading=React.createElement(
+                "h1",
+                null,
+                "Inicio con React"
+            );
+        let ul=React.createElement(
+                "ul",
+                {style:{color:"blue"}},
+                React.createElement("li", null, "Monday"),
+                React.createElement("li", null, "Tuesday"),
+                React.createElement("li", null, "Wednesday"),
+            );
+        ReactDOM.render(
+            ul,
+            document.getElementById("root")
+        );
+     /*    ReactDOM.render(
+            ul,
+            document.getElementById("otro")
+        ); */
+    </script>
+</body>
+</html>
